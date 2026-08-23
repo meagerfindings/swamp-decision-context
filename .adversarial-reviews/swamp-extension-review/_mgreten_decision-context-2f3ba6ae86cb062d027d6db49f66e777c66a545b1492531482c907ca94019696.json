@@ -1,0 +1,22 @@
+{
+  "extension": "@mgreten/decision-context",
+  "version": "2026.08.23.1",
+  "reviewedAt": "2026-08-23T15:09:04Z",
+  "dimensions": [
+    { "id": "credentials-secrets", "verdict": "na", "note": "No credentials or external services." },
+    { "id": "logging-quality", "verdict": "issue", "note": "compile has no structured entry or completion logging." },
+    { "id": "error-handling", "verdict": "pass", "note": "Validation and replay conflicts fail before writes." },
+    { "id": "testing-completeness", "verdict": "pass", "note": "Success, incomplete evidence, persistence, and replay paths are tested." },
+    { "id": "idempotency-resilience", "verdict": "pass", "note": "Exact replay is accepted and conflicting replay rejected." },
+    { "id": "api-contracts", "verdict": "na", "note": "No external API calls." },
+    { "id": "resource-management", "verdict": "na", "note": "No external resources or handles." },
+    { "id": "published-surface-hygiene", "verdict": "pass", "note": "Published examples use synthetic placeholder data." },
+    { "id": "schema-strictness", "verdict": "pass", "note": "Persisted and nested object schemas are strict." },
+    { "id": "lifetime-gc", "verdict": "pass", "note": "Packet resource declares infinite lifetime and GC retention." },
+    { "id": "crud-completeness", "verdict": "na", "note": "Immutable persistence model, not a CRUD lifecycle." },
+    { "id": "preflight-checks", "verdict": "na", "note": "No external mutating operation." },
+    { "id": "instance-names", "verdict": "pass", "note": "Single packet spec uses packet-bound names." },
+    { "id": "data-access", "verdict": "pass", "note": "Replay state is read through readResource." },
+    { "id": "version-upgrades", "verdict": "na", "note": "Initial standalone version." }
+  ]
+}
