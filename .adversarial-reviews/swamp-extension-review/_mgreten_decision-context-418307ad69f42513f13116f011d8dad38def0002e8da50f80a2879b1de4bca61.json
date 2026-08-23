@@ -1,13 +1,13 @@
 {
   "extension": "@mgreten/decision-context",
   "version": "2026.08.23.1",
-  "reviewedAt": "2026-08-23T15:09:04Z",
+  "reviewedAt": "2026-08-23T20:16:09Z",
   "dimensions": [
     { "id": "credentials-secrets", "verdict": "na", "note": "No credentials or external services." },
-    { "id": "logging-quality", "verdict": "issue", "note": "compile has no structured entry or completion logging." },
+    { "id": "logging-quality", "verdict": "pass", "note": "Compile, successful persistence, and exact replay use structured progress logging without payload data." },
     { "id": "error-handling", "verdict": "pass", "note": "Validation and replay conflicts fail before writes." },
-    { "id": "testing-completeness", "verdict": "pass", "note": "Success, incomplete evidence, persistence, and replay paths are tested." },
-    { "id": "idempotency-resilience", "verdict": "pass", "note": "Exact replay is accepted and conflicting replay rejected." },
+    { "id": "testing-completeness", "verdict": "pass", "note": "Tests cover canonical ordering, no-authority output, incomplete evidence, strict malformed/tampered input rejection, persistence, exact replay, and conflicting replay." },
+    { "id": "idempotency-resilience", "verdict": "pass", "note": "Exact replay is write-free and conflicting replay fails before writing." },
     { "id": "api-contracts", "verdict": "na", "note": "No external API calls." },
     { "id": "resource-management", "verdict": "na", "note": "No external resources or handles." },
     { "id": "published-surface-hygiene", "verdict": "pass", "note": "Published examples use synthetic placeholder data." },
